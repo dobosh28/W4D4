@@ -20,3 +20,20 @@ def two_sum(array)
 
     pairs
 end
+
+
+
+def my_transpose(subarrays)
+    dimensions = subarrays[0].length
+    transposed = []
+
+    dimensions.times { transposed << [] }
+    subarrays.each_with_index do |row, row_n|
+        row.each_with_index do |el, col_n|
+            transposed[col_n] << el
+        end
+    end
+
+    transposed
+end
+

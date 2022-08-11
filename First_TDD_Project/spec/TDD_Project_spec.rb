@@ -31,3 +31,30 @@ describe 'two_sum' do
     end 
 
 end
+
+describe 'my_transpose' do  
+
+    it "should transpose a 2D array where horizontal rows are converted to vertical columns" do
+        arr = [
+            [0, 1, 2], 
+            [3, 4, 5],
+            [6, 7, 8]
+        ]
+
+        expected_arr = [
+            [0, 3, 6], 
+            [1, 4, 7],
+            [2, 5, 8]
+        ]
+        expect(my_transpose(arr)).to eq(expected_arr)
+    end
+
+    it "should not use the built-in Array#transpose" do
+        arr = [
+            [0, 1, 2], 
+            [3, 4, 5]
+        ]
+        expect(arr).to_not receive(:transpose)
+        my_transpose(arr)
+    end
+end
