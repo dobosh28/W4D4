@@ -37,3 +37,31 @@ def my_transpose(subarrays)
     transposed
 end
 
+# def stock_picker(*prices)
+#     largest_diff = Hash.new { |h,k| h[k] = v }
+
+#     (0...prices.length) do |buy_day| #indices
+#         (buy_day + 1...prices.length) do |after_day|  #indices
+#             price_diff = prices[after_day] - prices[buy_day]
+#             largest_diff[buy_day, after_day] = price_diff
+#         end
+#     end
+
+#     largest_diff.select { |days| price_diff.max }
+# end
+
+
+# def stock_picker(array) # Day 1, day 4 with value $5 
+#     largest_diff = Hash.new { |h,k| h[k] = v }
+
+#     (0...array.length).each do |buy_day| #indices
+#         (buy_day + 1...array.length).each do |after_day|  #indices
+#             price_diff = array[after_day] - array[buy_day]
+#             largest_diff[buy_day, after_day] = price_diff
+#         end
+#     end
+#     largest_diff.select { |days| price_diff.max }
+# end
+
+
+# p stock_picker([1,4,3,6])
